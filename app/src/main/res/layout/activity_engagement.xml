@@ -1,0 +1,149 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Botón para Inicializar NFC -->
+        <Button
+            android:id="@+id/btnInitNFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inicializar NFC"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Botón para Escanear Tag NFC -->
+        <Button
+            android:id="@+id/btnScanTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escanear Tag NFC"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Botón para Iniciar MFA -->
+        <Button
+            android:id="@+id/btnStartMFA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar MFA"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Botón para Gestionar Wallet -->
+        <Button
+            android:id="@+id/btnManageWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gestionar Wallet"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Texto para mostrar resultados -->
+        <TextView
+            android:id="@+id/txtOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Resultado..."
+            android:textSize="16sp" />
+
+        <!-- Título principal -->
+        <TextView
+            android:id="@+id/txtEngadmentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EngadmentId"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:id="@+id/txtTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Campo de descripción -->
+        <EditText
+            android:id="@+id/edtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Descripción larga -->
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Issuer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issuer: GD2SVFOJ"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Signer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signer: GD2SVFOJ"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Service Provider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Provider: GD2SVFOJ"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Amount -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: 1"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Balance -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balance: 0.5"
+            android:paddingBottom="16dp" />
+
+        <!-- Botón de Cancelar -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Botón de Aprobar -->
+        <Button
+            android:id="@+id/btnApprove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aprobar"
+            android:background="@android:color/holo_green_light"
+            android:textColor="@android:color/white"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>
