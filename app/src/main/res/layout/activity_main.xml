@@ -31,6 +31,17 @@
         android:layout_marginBottom="24dp"
         android:inputType="text" />
 
+    <!-- Campo de texto para Contract ID -->
+    <EditText
+        android:id="@+id/contractIdInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contract ID"
+        android:background="@android:color/darker_gray"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:inputType="text" />
+
     <!-- Botón Entrar -->
     <Button
         android:id="@+id/enterButton"

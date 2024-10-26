@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchEngagementData(engadmentId: String) {
-        val url = "https://api.ejemplo.com/engagement/$engadmentId"
+        val url = "https://api.trustlesswork/escrow/get-escrow-by-engagement-id?engagementId=$engadmentId&contractId=$contractId/"
         val client = OkHttpClient()
         val request = Request.Builder()
             .url(url)
