@@ -1,8 +1,8 @@
-# Fideicomiso Approver Ring
+# Revolutionary Farmers
 
 Using the Trustless Work API, this project builds an escrow-based solution to streamline crop financing—an innovative step for decentralized agriculture. What’s even more exciting? We integrated HyperCycle NFC rings to release funds from escrow, marking this as our first-ever DePIN (Decentralized Physical Infrastructure) integration!
 
-This project was created and initiated during the **Ethereum Pura Vida 2024** hackathon.
+This project was created and initiated during the [Ethereum Pura Vida 2024](https://devfolio.co/projects/revolutionary-farmers-b88c) hackathon.
 
 ## Project Structure
 
