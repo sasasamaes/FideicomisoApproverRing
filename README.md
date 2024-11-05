@@ -34,6 +34,8 @@ For a more detailed overview, you can watch our presentation video here: [Projec
 
 ## Installation
 
+Each folder within the project (`android`, `contracts`, `frontend`) contains its own `README.md` file with specific instructions for setting up that component locally. Follow the individual setup guides in each folder to configure and run each part of the project.
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/sasasamaes/FideicomisoApproverRing.git
