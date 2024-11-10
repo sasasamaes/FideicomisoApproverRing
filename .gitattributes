@@ -1,0 +1,1 @@
+web/node_modules/@next/swc-darwin-x64/next-swc.darwin-x64.node filter=lfs diff=lfs merge=lfs -text
