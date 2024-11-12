@@ -40,7 +40,7 @@ const Header = () => {
     <header className="flex flex-col md:flex-row w-full justify-between gap-5 container mx-auto">
       <Link href="/" className="mx-auto md:m-0">
         {" "}
-        <Image src="/logo.jpg" width={100} height={100} alt="logo" />
+        <Image src="/logo.jpeg" width={100} height={100} alt="logo" />
       </Link>
 
       {/* Navigation Menu */}
