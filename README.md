@@ -1,3 +1,9 @@
+
+[![Telegram Chat][tg-badge]][tg-url]
+
+[tg-badge]: https://img.shields.io/endpoint?color=neon&logo=telegram&label=chat&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fdojoengine
+[tg-url]: https://t.me/+U4lTlqhaFGUyY2Fh
+
 # Revolutionary Farmers
 
 Using the Trustless Work API, this project builds an escrow-based solution to streamline crop financing—an innovative step for decentralized agriculture. What’s even more exciting? We integrated HyperCycle NFC rings to release funds from escrow, marking this as our first-ever DePIN (Decentralized Physical Infrastructure) integration!
