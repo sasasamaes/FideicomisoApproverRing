@@ -1,4 +1,10 @@
 
+<a href="https://x.com/RevoFarmers">
+  <img src="https://img.shields.io/twitter/follow/RevoFarmers?style=social"/>
+</a>
+<img src="https://img.shields.io/github/stars/Crypto-Jaguars/Revolutionary_Farmers?style=social"/>
+
+
 [![Telegram Chat][tg-badge]][tg-url]
 
 [tg-badge]: https://img.shields.io/endpoint?color=neon&logo=telegram&label=chat&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2FRevolutionary_Farmers
