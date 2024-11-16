@@ -1,8 +1,7 @@
 
-[![Telegram Chat][tg-badge]][tg-url]
+[![Chat on Telegram](https://img.shields.io/badge/Chat-Telegram-blue?logo=telegram&style=flat-square)](https://t.me/+U4lTlqhaFGUyY2Fh)
 
-[tg-badge]: https://img.shields.io/endpoint?color=neon&logo=telegram&label=chat&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fdojoengine
-[tg-url]: https://t.me/+U4lTlqhaFGUyY2Fh
+
 
 # Revolutionary Farmers
 
