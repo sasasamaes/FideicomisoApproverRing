@@ -16,6 +16,5 @@ export default function Home() {
           as well as the buyers of the products grown.
         </p>
       </div>
-    </Bounded>
   );
 }
