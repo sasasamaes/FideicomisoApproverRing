@@ -42,35 +42,35 @@ For a more detailed overview, you can watch our presentation video here: [Projec
 
 <table align="center">
   <tr>
-    <td align="center">
+    <td align="center" valign="top" width="20%">
       <img src="https://avatars.githubusercontent.com/u/993828?v=4" alt="Owner 1" width="150" />
       <br /><br />
       <strong>Francisco Javier Campos Díaz</strong>
       <br /><br />
       <a href="https://github.com/sasasamaes" target="_blank">GitHub</a>
     </td>
-    <td align="center">
+    <td align="center" valign="top" width="20%">
       <img src="https://avatars.githubusercontent.com/u/128087198?v=4" alt="Owner 2" width="150" />
       <br /><br />
       <strong>Manuel Jiménez Garro</strong>
       <br /><br />
       <a href="https://github.com/ManuelJG1999" target="_blank">GitHub</a>
     </td>
-    <td align="center">
+    <td align="center" valign="top" width="20%">
       <img src="https://avatars.githubusercontent.com/u/112297389?v=4" alt="Owner 3" width="150" />
       <br /><br />
       <strong>Sebastián Salazar Solano</strong>
       <br /><br />
       <a href="https://github.com/salazarsebas" target="_blank">GitHub</a>
     </td>
-    <td align="center">
+    <td align="center" valign="top" width="20%">
       <img src="https://avatars.githubusercontent.com/u/176054645?v=4" alt="Owner 4" width="150" />
       <br /><br />
       <strong>Matias Aguilar</strong>
       <br /><br />
       <a href="https://github.com/aguilar1x" target="_blank">GitHub</a>
     </td>
-    <td align="center">
+    <td align="center" valign="top" width="20%">
       <img src="https://avatars.githubusercontent.com/u/174588862?v=4" alt="Owner 5" width="150" />
       <br /><br />
       <strong>Diego Barquero Quesada</strong>
