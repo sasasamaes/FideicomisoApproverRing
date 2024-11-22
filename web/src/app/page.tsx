@@ -5,15 +5,16 @@ import Bounded from "@/components/Bounded";
 export default function Home() {
   return (
     <Bounded center={true}>
-      <div className="flex flex-col md:flex-row justify-center items-center w-full h-full mt-0 md:mt-20 gap-10">
-        <h1 className="text-5xl md:text-6xl font-bold">
-          Revolutionary Farmers
-        </h1>
-        <hr className="hidden md:block bg-gray-200 w-0.5 h-96" />
-        <p className="text-xl">
-          <strong>Escrows</strong> for the field of <strong>agriculture</strong>, <br />
-          and with the objective of <strong>benefiting farmers</strong> <br />
-          as well as the buyers of the products grown.
+      <div className="flex flex-col justify-center items-center w-full h-full mt-0 md:mt-20 gap-10">
+        <div className="flex flex-col items-center">
+          <h1 className="text-[40px] md:text-[80px] font-[500] text-[#8CD72B]">
+            Revolutionary
+          </h1>
+          <h1 className="text-[40px] md:text-[80px] text-white">Farmers</h1>
+        </div>
+        <p className="text-[16px] md:text-[20px] w-full md:max-w-[60%] text-white text-center">
+          Escrows for the field of agriculture, and with the objective of
+          benefiting farmers as well as the buyers of the products grown.
         </p>
       </div>
     </Bounded>

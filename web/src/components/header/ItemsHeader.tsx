@@ -17,15 +17,15 @@ const ItemsHeader = ({ isEnabled }: ItemsHeaderProps) => {
 
   return (
     isEnabled && (
-      <NavigationMenu className="mx-auto md:m-0">
-        <NavigationMenuList className="flex gap-10">
+      <NavigationMenu className="mx-auto md:m-0 w-full ">
+        <NavigationMenuList className="flex flex-col md:flex-row items-start w-full gap-4">
           <NavigationMenuItem>
             <Link
               href="/escrow/initialize-escrow"
               className={
                 isActive("/escrow/initialize-escrow")
-                  ? "font-bold text-primary"
-                  : ""
+                  ? "font-bold text-[#A0D911] underline"
+                  : "text-white"
               }
               passHref
             >
@@ -34,70 +34,13 @@ const ItemsHeader = ({ isEnabled }: ItemsHeaderProps) => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="/escrow/fund-escrow"
-              className={
-                isActive("/escrow/fund-escrow") ? "font-bold text-primary" : ""
-              }
-              passHref
-            >
-              Fund Escrow
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link
-              href="/escrow/complete-escrow"
-              className={
-                isActive("/escrow/complete-escrow") ? "font-bold text-primary" : ""
-              }
-              passHref
-            >
-              Complete Escrow
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link
               href="/escrow/claim-escrow-earnings"
               className={
-                isActive("/escrow/claim-escrow-earnings") ? "font-bold text-primary" : ""
+                isActive("/escrow/claim-escrow-earnings") ? "font-bold text-[#A0D911] underline" : "text-white"
               }
               passHref
             >
               Claim Escrow Earnings
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link
-              href="/escrow/cancel-escrow"
-              className={
-                isActive("/escrow/cancel-escrow") ? "font-bold text-primary" : ""
-              }
-              passHref
-            >
-              Cancel Escrow
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link
-              href="/escrow/refund-remaining-funds"
-              className={
-                isActive("/escrow/refund-remaining-funds") ? "font-bold text-primary" : ""
-              }
-              passHref
-            >
-              Refund remaining funds
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link
-              href="/escrow/get-engagement"
-              className={
-                isActive("/escrow/get-engagement")
-                  ? "font-bold text-primary"
-                  : ""
-              }
-              passHref
-            >
-              Get Engagement
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
