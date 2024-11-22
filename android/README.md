@@ -1,22 +1,25 @@
 # Fideicomiso Approver Ring
 
-## Description
-
 Fideicomiso Approver Ring is an Android application designed to facilitate the approval of trusts using the [Ring of Rings SDK](https://github.com/ringofrings/ringofringssdk) and the [Trustless Work API](https://docs.trustlesswork.com/trustless-work). This application allows users to securely and efficiently interact with trust contracts.
 
-## Project Structure
+## 📁 Project Structure
 
 The project is located in the `android` folder and is developed using Android Studio.
 
-## Prerequisites
+## 📝 Prerequisites
 
-Before you begin, ensure you have the following programs and tools installed:
+### Minimum Hardware Requirements:
+- Operating System: Windows (8, 10, or 11) / Linux / macOS (10.14 Mojave or later) / ChromeOS.
+- RAM: 8 GB (16 GB recommended)
+- Storage: 4 GB of free space for Android Studio and dependencies.
+- CPU: 64-bit processor (Intel or AMD).
 
-- [Android Studio](https://developer.android.com/studio) (version 4.0 or higher)
-- JDK 8 or higher
+### Software Requirements:
+- [Android Studio](https://developer.android.com/studio): Version 4.0 or higher.
+- [JDK](https://www.oracle.com/java/technologies/javase-downloads.html): Version 8 or higher.
 - An Android device or a configured emulator
 
-## Installation
+## ⚙️ Installation
 
 Follow these steps to set up the project on your local machine:
 
@@ -25,70 +28,52 @@ Follow these steps to set up the project on your local machine:
    Open a terminal and run the following command to clone the repository:
 
    ```bash
-   git clone https://github.com/sasasamaes/FideicomisoApproverRing.git
+      git clone https://github.com/your-username/Revolutionary_Farmers.git
+   ```
 
 2. **Open the Project in Android Studio**
 
    Navigate to the android folder inside the cloned repository:
 
    ```bash
-   cd FideicomisoApproverRing/android
+      cd Revolutionary_Farmers/android
    ```
 
    Then, open the project in Android Studio:
-	•	Launch Android Studio.
-	•	Click on “Open an existing Android Studio project”.
-	•	Select the android folder from the cloned repository.
+	- Launch **Android Studio**.
+   - Click on “Open an existing Android Studio project”.
+   - Select the `android` folder from the cloned repository.
 
 3. **Configure Dependencies**
 
-  Configure Dependencies
-  ```
-  implementation 'com.ringofrings:ringofringssdk:latest_version'
-  ```
+   Configure Dependencies
+   ```bash
+      implementation 'com.ringofrings:ringofringssdk:latest_version'
+   ```
 
-Check the Ring of Rings SDK repository (https://github.com/ringofrings/ringofringssdk) for the latest version.
+   Check the Ring of Rings SDK repository (https://github.com/ringofrings/ringofringssdk) for the latest version.
 
 
 4. **Configure the Trustless Work API**
 
-Follow the Trustless Work documentation(https://docs.trustlesswork.com/trustless-work) to correctly integrate the API into your application. Make sure to have all the necessary credentials and configurations, such as API keys and corresponding endpoints.
+Follow the [Trustless Work documentation](https://docs.trustlesswork.com/trustless-work) to correctly integrate the API into your application. Make sure to have all the necessary credentials and configurations, such as API keys and corresponding endpoints.
 
-5. **Usage**
+## 🚀 Usage
 
 Once you have installed and configured the project, follow these steps to run and use the application:
-	1.	Compile and Run
-In Android Studio, select a device or emulator on which you want to run the application. Then, click the “Run” button (or press Shift + F10) to compile and run the application.
-	2.	Interacting with the Application
-Upon opening the application, you will be able to interact with trust contracts. The available functionalities include:
-	•	Approve Trusts: Select a trust and follow the instructions to approve it.
-	•	Reject Trusts: If necessary, you can also reject trusts by following the designated workflow.
-	•	Verify Contracts: You can review the status of trust contracts from the interface.
 
-6. **Contributions**
+1. **Compile and Run**
+   In **Android Studio**, select a device or emulator on which you want to run the application. Then, click the “Run” button (or press **Shift + F10**) to compile and run the application.
 
-If you would like to contribute to this project, please follow these steps:
-1.	Fork the repository.
-2.	Create a new branch for your feature or fix:
-```
-git checkout -b feature/new-feature
-```
-3.	Make your changes and commit them:
-```
-git commit -m "Add new feature"
-```
-4. Push your changes to your forked repository:
-```
-git push origin feature/new-feature
-```
-5.	Create a pull request to the original repository.
+2. **Interacting with the Application**
+   Upon opening the application, you will be able to interact with trust contracts. The available functionalities include:
+   - **Approve Trusts:** Select a trust and follow the instructions to approve it.
+   - **Reject Trusts:** If necessary, you can also reject trusts by following the designated workflow.
+   - **Verify Contracts:** You can review the status of trust contracts from the interface.
 
-## License
+## 🛠 Tech Stack
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-##Contact
-
-For any questions or concerns, please contact [Francisco Javier Campos Diaz](https://github.com/sasasamaes) or [Manuel Jimenez Garro](https://github.com/ManuelJG1999) or [Sebastian Salazar](https://github.com/salazarsebas) or [Matias Aguilar](https://github.com/aguilar1x) or [Diego Barquero](https://github.com/DiegoB1911).
-
-
+- **[Android SDK](https://developer.android.com/studio)** - Framework for building Android applications.
+- **[Kotlin](https://kotlinlang.org/)** - Programming language for building Android apps.
+- **[Ring of Rings SDK](https://github.com/ringofrings/ringofringssdk)** - SDK for integrating ring-based identity and access management in Android applications.
+- **[Trustless Work API](https://docs.trustlesswork.com/trustless-work)** - Enables trustless payments via smart contracts, securing funds in escrow until milestones are approved by clients.
