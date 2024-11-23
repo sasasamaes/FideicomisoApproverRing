@@ -1,10 +1,10 @@
-import { usePathname } from "next/navigation"; // Importar usePathname
+import { usePathname } from 'next/navigation'; // Importar usePathname
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import Link from "next/link";
+  NavigationMenuList
+} from '@/components/ui/navigation-menu';
+import Link from 'next/link';
 
 type ItemsHeaderProps = {
   isEnabled: string;
@@ -14,6 +14,10 @@ const ItemsHeader = ({ isEnabled }: ItemsHeaderProps) => {
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
+  const getLinkStyles = (path: string) =>
+    +isActive(path)
+      ? 'font-bold text-revolutionary_green underline'
+      : 'text-white';
 
   return (
     isEnabled && (
@@ -22,11 +26,7 @@ const ItemsHeader = ({ isEnabled }: ItemsHeaderProps) => {
           <NavigationMenuItem>
             <Link
               href="/escrow/initialize-escrow"
-              className={
-                isActive("/escrow/initialize-escrow")
-                  ? "font-bold text-[#A0D911] underline"
-                  : "text-white"
-              }
+              className={getLinkStyles('/escrow/initialize-escrow')}
               passHref
             >
               Create Escrow
@@ -35,9 +35,7 @@ const ItemsHeader = ({ isEnabled }: ItemsHeaderProps) => {
           <NavigationMenuItem>
             <Link
               href="/escrow/claim-escrow-earnings"
-              className={
-                isActive("/escrow/claim-escrow-earnings") ? "font-bold text-[#A0D911] underline" : "text-white"
-              }
+              className={getLinkStyles('/escrow/claim-escrow-earnings')}
               passHref
             >
               Claim Escrow Earnings
