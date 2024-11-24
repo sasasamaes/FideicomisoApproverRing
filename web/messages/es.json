@@ -1,0 +1,54 @@
+{
+  "HomePage": {
+    "title": "Revolutionary",
+    "subtitle": "Farmers",
+    "description": "Fideicomisos especializados para el sector agrícola, cuyo objetivo principal es beneficiar tanto a los agricultores como a los compradores de los productos cultivados."
+  },
+  "ItemsHeader": {
+    "initializeEscrow": "Crear Escrow",
+    "claimEarnings": "Reclamar Ganancias de Escrow"
+  },
+  "InitializeEscrowForm": {
+    "title": "Crear Escrow",
+    "subtitle": "Rellena los detalles a continuación para configurar un acuerdo de fideicomiso seguro y confiable.",
+    "fields": {
+      "engagementId": {
+        "label": "Compromiso",
+        "placeholder": "Ingresa el compromiso",
+        "description": "Este compromiso te ayudará a identificar los fideicomisos asociados con un proveedor de servicios."
+      },
+      "description": {
+        "label": "Descripción",
+        "placeholder": "Ingresa la descripción",
+        "description": "Describe el fideicomiso."
+      },
+      "serviceProvider": {
+        "label": "Proveedor de Servicios",
+        "placeholder": "Ingresa el proveedor de servicios",
+        "description": "Por favor, ingresa la billetera del proveedor de servicios."
+      },
+      "amount": {
+        "label": "Monto",
+        "placeholder": "Ingresa el monto total del fideicomiso",
+        "description": "Por favor, ingresa el monto/precio del fideicomiso."
+      }
+    },
+    "button": "Crear fideicomiso"
+  },
+  "ClaimEscrowEarningsForm": {
+    "title": "Reclamar Ganancias de Escrow",
+    "subtitle": "Rellena los detalles a continuación para reclamar las ganancias del fideicomiso.",
+    "fields": {
+      "contractId": {
+        "label": "ID del Contrato",
+        "placeholder": "Ingresa el ID del contrato",
+        "description": "Este compromiso te ayudará a identificar los fideicomisos asociados con un proveedor de servicios."
+      },
+      "engagementId": {
+        "label": "Compromiso",
+        "placeholder": "Ingresa el compromiso"
+      }
+    },
+    "submitButtonText": "Financiar fideicomiso"
+  }
+}
