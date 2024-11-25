@@ -34,20 +34,25 @@ export default function RootLayout({
     const storedLocale = localStorage.getItem("language") || locale;
     if (storedLocale !== currentLocale) {
       const newPathname = window.location.pathname.replace(
-        /^\/(en|es)/,
+        /^\/[a-z]{2}/,
         `/${storedLocale}`
       );
-      setCurrentLocale(storedLocale);
-      router.replace(newPathname);
+      if (newPathname !== window.location.pathname) {
+        setCurrentLocale(storedLocale); router.replace(newPathname);
+      }
     }
   }, [locale, currentLocale, router]);
 
   useEffect(() => {
     const loadMessages = async () => {
-      const importedMessages = (
-        await import(`../../../messages/${currentLocale}.json`)
-      ).default;
-      setMessages(importedMessages);
+      try {
+        const importedMessages = (
+          await import(`../../../messages/${currentLocale}.json`)
+        ).default;
+        setMessages(importedMessages);
+      } catch (error) {
+        console.error(`Failed to load messages for locale: ${currentLocale}`, error);
+      }
     };
     loadMessages();
   }, [currentLocale]);
@@ -57,13 +62,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased p-5 bg-home-background bg-no-repeat bg-cover min-h-screen`}
       >
-        {messages && (
+        {messages ? (
           <NextIntlClientProvider locale={currentLocale} messages={messages}>
             <Header />
             {children}
             <footer></footer>
             <Toaster />
           </NextIntlClientProvider>
+        ) : (
+          <div>Loading...</div>
         )}
       </body>
     </html>

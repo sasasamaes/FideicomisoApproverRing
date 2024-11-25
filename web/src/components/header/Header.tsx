@@ -5,10 +5,9 @@ import { useWalletStore } from "@/store/walletStore";
 import { useWallet } from "@/wallet/hooks/useWallet.hook";
 import { FaUserCircle } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import ItemsHeader from "./ItemsHeader";
-import LanguageSwitcher from "./LenguageSwitcher";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { usePathname, useRouter } from "next/navigation";
 import { useLanguageStore } from "@/store/languageStore";
 
