@@ -2,33 +2,34 @@
 
 import { ClaimEscrowForm } from "@/components/shared/ClaimEscrowForm";
 import { useClaimEscrowEarningsHook } from "./hooks/claim-escrow-earnings.hook";
+import { useTranslations } from "next-intl";
 
 export function ClaimEscrowEarningsForm() {
   const { form, onSubmit } = useClaimEscrowEarningsHook();
+  const t = useTranslations("ClaimEscrowEarningsForm"); 
 
   const fields = [
     {
       name: "contractId",
-      label: "Contract ID",
-      placeholder: "Enter the contract ID",
-      description:
-        "This engagement will help you identify the escrows associated with a service provider.",
+      label: t("fields.contractId.label"),
+      placeholder: t("fields.contractId.placeholder"),
+      description: t("fields.contractId.description"),
     },
     {
       name: "engagementId",
-      label: "Engagement",
-      placeholder: "Enter the engagement",
+      label: t("fields.engagementId.label"),
+      placeholder: t("fields.engagementId.placeholder"),
     },
   ];
 
   return (
     <ClaimEscrowForm
-      title="Claim Escrow Earnings"
-      subtitle="Fill in the details below to claim escrow earnings."
+      title={t("title")}
+      subtitle={t("subtitle")}
       fields={fields}
       form={form}
       onSubmit={onSubmit}
-      submitButtonText="Fund escrow"
+      submitButtonText={t("submitButtonText")}
     />
   );
 }

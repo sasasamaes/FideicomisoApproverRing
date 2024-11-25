@@ -1,0 +1,54 @@
+{
+  "HomePage": {
+    "title": "Revolutionary",
+    "subtitle": "Farmers",
+    "description": "Escrows for the field of agriculture, and with the objective of benefiting farmers as well as the buyers of the products grown."
+  },
+  "ItemsHeader": {
+    "initializeEscrow": "Create Escrow",
+    "claimEarnings": "Claim Escrow Earnings"
+  },
+  "InitializeEscrowForm": {
+    "title": "Create Escrow",
+    "subtitle": "Fill in the details below to set up a secure and reliable escrow agreement.",
+    "fields": {
+      "engagementId": {
+        "label": "Engagement",
+        "placeholder": "Enter the engagement",
+        "description": "This engagement will help you identify the escrows associated with a service provider."
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Enter the description",
+        "description": "Describe the escrow."
+      },
+      "serviceProvider": {
+        "label": "Service Provider",
+        "placeholder": "Enter the service provider",
+        "description": "Please enter the wallet of the service provider."
+      },
+      "amount": {
+        "label": "Amount",
+        "placeholder": "Enter the amount of the entire escrow",
+        "description": "Please enter the amount/price of the escrow."
+      }
+    },
+    "button": "Create escrow"
+  },
+  "ClaimEscrowEarningsForm": {
+    "title": "Claim Escrow Earnings",
+    "subtitle": "Fill in the details below to claim escrow earnings.",
+    "fields": {
+      "contractId": {
+        "label": "Contract ID",
+        "placeholder": "Enter the contract ID",
+        "description": "This engagement will help you identify the escrows associated with a service provider."
+      },
+      "engagementId": {
+        "label": "Engagement",
+        "placeholder": "Enter the engagement"
+      }
+    },
+    "submitButtonText": "Fund escrow"
+  }
+}

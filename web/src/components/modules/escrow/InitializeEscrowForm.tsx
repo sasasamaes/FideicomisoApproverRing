@@ -12,9 +12,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useInitializeEscrowHook } from "./hooks/initialize-escrow.hook";
+import { useTranslations } from "next-intl";
 
 export function InitializeEscrowForm() {
   const { form, onSubmit } = useInitializeEscrowHook();
+  const t = useTranslations("InitializeEscrowForm"); 
 
   return (
     <div
@@ -23,11 +25,8 @@ export function InitializeEscrowForm() {
         background: "linear-gradient(to bottom left, #33471E 10%, #132864 100%)",
       }}
     >
-      <h2 className="text-white text-xl font-semibold mb-4">Create Escrow</h2>
-      <p className="text-gray-300 text-sm mb-6">
-        Fill in the details below to set up a secure and reliable escrow
-        agreement.
-      </p>
+      <h2 className="text-white text-xl font-semibold mb-4">{t("title")}</h2>
+      <p className="text-gray-300 text-sm mb-6">{t("subtitle")}</p>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -38,13 +37,12 @@ export function InitializeEscrowForm() {
             name="engagementId"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white">Engagement</FormLabel>
+                <FormLabel className="text-white">{t("fields.engagementId.label")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter the engagement" {...field} />
+                  <Input placeholder={t("fields.engagementId.placeholder")} {...field} />
                 </FormControl>
                 <FormDescription className="text-gray-400">
-                  This engagement will help you identify the escrows associated
-                  with a service provider.
+                  {t("fields.engagementId.description")}
                 </FormDescription>
                 <FormMessage />
               </FormItem>
@@ -55,12 +53,12 @@ export function InitializeEscrowForm() {
             name="description"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white">Description</FormLabel>
+                <FormLabel className="text-white">{t("fields.description.label")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter the description" {...field} />
+                  <Input placeholder={t("fields.description.placeholder")} {...field} />
                 </FormControl>
                 <FormDescription className="text-gray-400">
-                  Describe the escrow.
+                  {t("fields.description.description")}
                 </FormDescription>
                 <FormMessage />
               </FormItem>
@@ -71,12 +69,12 @@ export function InitializeEscrowForm() {
             name="serviceProvider"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white">Service Provider</FormLabel>
+                <FormLabel className="text-white">{t("fields.serviceProvider.label")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter the service provider" {...field} />
+                  <Input placeholder={t("fields.serviceProvider.placeholder")} {...field} />
                 </FormControl>
                 <FormDescription className="text-gray-400">
-                  Please enter the wallet of the service provider.
+                  {t("fields.serviceProvider.description")}
                 </FormDescription>
                 <FormMessage />
               </FormItem>
@@ -87,15 +85,12 @@ export function InitializeEscrowForm() {
             name="amount"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white">Amount</FormLabel>
+                <FormLabel className="text-white">{t("fields.amount.label")}</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="Enter the amount of the entire escrow"
-                    {...field}
-                  />
+                  <Input placeholder={t("fields.amount.placeholder")} {...field} />
                 </FormControl>
                 <FormDescription className="text-gray-400">
-                  Please enter the amount/price of the escrow.
+                  {t("fields.amount.description")}
                 </FormDescription>
                 <FormMessage />
               </FormItem>
@@ -103,7 +98,7 @@ export function InitializeEscrowForm() {
           />
           <div className="flex justify-end">
             <Button className="bg-white text-black font-medium py-1 px-4 rounded-full shadow-md hover:shadow-lg transition text-sm">
-              Create escrow
+              {t("button")}
             </Button>
           </div>
         </form>
