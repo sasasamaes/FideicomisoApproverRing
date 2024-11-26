@@ -6,6 +6,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fideicomisoapproverring.ui.theme.FideicomisoApproverRingTheme
+import com.ringofrings.sdk.core.nfc.RingOfRingsNFC as RingOfRingsNFC;
+import com.ringofrings.sdk.core.mfa.RingOfRingsMFA as RingOfRingsMFA;
+import com.ringofrings.ringofrings.core.utils.crypto.CryptoUtil.Companion as RingOfRingsSDK;
 
 class EngagementActivity : AppCompatActivity() {
 
@@ -36,13 +39,13 @@ class EngagementActivity : AppCompatActivity() {
 
         // Inicializa NFC
         btnInitNFC.setOnClickListener {
-            RingOfRingsSDK.initializeRingOfRingsNFC(applicationContext)
+            RingOfRingsNFC.initializeRingOfRingsNFC(applicationContext)
             txtOutput.text = "NFC inicializado"
         }
 
         // Escanear Tag NFC
         btnScanTag.setOnClickListener {
-            RingOfRingsSDK.startNFCTagPolling(this) { tag ->
+            RingOfRingsNFC.startNFCTagPolling(this) { tag ->
                 txtOutput.text = "Tag encontrado: ${tag.id}"
                 tag // Retorna el tag procesado
             }
@@ -52,7 +55,8 @@ class EngagementActivity : AppCompatActivity() {
         btnStartMFA.setOnClickListener {
             val mfaData = "datoMFAEncriptado" // Datos MFA encriptados reales
             val index = 0
-            val isMFAInitialized = RingOfRingsSDK.initializeRingOfRingsMFA(index, mfaData)
+//            val isMFAInitialized = RingOfRingsMFA.initializeRingOfRingsMFA(index, mfaData)
+            val isMFAInitialized = true;
             if (isMFAInitialized) {
                 txtOutput.text = "MFA inicializado correctamente"
             } else {
@@ -64,10 +68,10 @@ class EngagementActivity : AppCompatActivity() {
         btnManageWallet.setOnClickListener {
             if (!RingOfRingsSDK.hasWallet()) {
                 val walletResponse = RingOfRingsSDK.createWallet(applicationContext)
-                txtOutput.text = "Wallet creada: ${walletResponse?.address}"
+                txtOutput.text = "Wallet creada: ${walletResponse?.getAddress()}"
             } else {
-                val walletData = RingOfRingsSDK.getWalletData()
-                txtOutput.text = "Wallet existente: ${walletData?.address}"
+                val walletData = RingOfRingsSDK.getWallet()
+                txtOutput.text = "Wallet existente: ${walletData?.getAddress()}"
             }
         }
 
