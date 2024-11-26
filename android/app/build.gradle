@@ -44,10 +44,14 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    configurations {
+        all*.exclude module: 'conceal'
+        all*.exclude module: 'bcprov-jdk15on'
+    }
 }
 
 dependencies {
-    
+
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
@@ -70,9 +74,10 @@ dependencies {
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
 
+    implementation 'com.github.RingOfRings:RingOfRingsSDK:1.1.0'
 }
 subprojects {
-    configurations.all {
+    configurations.configureEach {
         resolutionStrategy.eachDependency { details ->
             if (details.requested.group == 'org.bouncycastle') {
                 details.useVersion '1.68'

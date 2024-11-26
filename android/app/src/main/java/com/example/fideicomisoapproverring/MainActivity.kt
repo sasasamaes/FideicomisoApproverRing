@@ -1,5 +1,5 @@
 // MainActivity.kt
-package com.example.fideicomiso
+package com.example.fideicomisoapproverring
 
 import android.content.Intent
 import android.os.Bundle
@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchEngagementData(engadmentId: String) {
+        val contractId = ""
         val url = "https://api.trustlesswork/escrow/get-escrow-by-engagement-id?engagementId=$engadmentId&contractId=$contractId/"
         val client = OkHttpClient()
         val request = Request.Builder()
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 runOnUiThread {
-                    Toast.makeText(this@MainActivity, "Error en la conexión", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Error en la conexiÃ³n", Toast.LENGTH_SHORT).show()
                 }
             }
 
