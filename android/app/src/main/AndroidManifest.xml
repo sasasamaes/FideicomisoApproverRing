@@ -17,14 +17,28 @@
             android:name=".EngagementActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".FindEscrowActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light">
+            android:label="Find Escrow"
+            android:theme="@style/Theme.FideicomisoApproverRing">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".EscrowDetailsActivity"
+            android:exported="false"
+            android:parentActivityName=".FindEscrowActivity"
+            android:theme="@style/Theme.FideicomisoApproverRing" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light">
+
         </activity>
     </application>
 
