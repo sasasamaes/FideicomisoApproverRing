@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.fideicomisoapproverring"
-        minSdk 28
+        minSdk 33
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -47,6 +47,9 @@ android {
     configurations {
         all*.exclude module: 'conceal'
         all*.exclude module: 'bcprov-jdk15on'
+    }
+    androidResources {
+        generateLocaleConfig true
     }
 }
 

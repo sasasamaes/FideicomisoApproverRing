@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">FideicomisoApproverRing</string>
+    <string name="titleText" translatable="false">Find Escrow</string>
+    <string name="engagementId" translatable="false">Engagement ID</string>
+    <string name="contractId" translatable="false">Contract ID</string>
+    <string name="enterButton" translatable="false">Enter</string>
 </resources>
