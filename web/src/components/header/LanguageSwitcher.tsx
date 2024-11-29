@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useLanguageStore } from "@/store/languageStore";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useState, useEffect, useRef } from "react";
+import { useLanguageStore } from '@/store/languageStore';
+import { usePathname, useRouter } from 'next/navigation';
+import React, { useState, useEffect, useRef } from 'react';
 
 const LanguageSwitcher = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -18,19 +18,19 @@ const LanguageSwitcher = () => {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   const changeLanguage = (locale: string) => {
     setLanguage(locale);
 
-    const segments = pathname.split("/");
+    const segments = pathname.split('/');
     const hasLangPrefix = /^[a-z]{2}$/.test(segments[1]);
     const newPath = hasLangPrefix
-      ? `/${locale}/${segments.slice(2).join("/")}`
+      ? `/${locale}/${segments.slice(2).join('/')}`
       : `/${locale}${pathname}`;
 
     router.push(newPath);
@@ -54,9 +54,9 @@ const LanguageSwitcher = () => {
       {isDropdownOpen && (
         <div className="absolute top-10 right-[-2rem] w-32 bg-white rounded-lg overflow-hidden shadow-md">
           <button
-            onClick={() => changeLanguage("en")}
+            onClick={() => changeLanguage('en')}
             className={`flex items-center gap-2 w-full px-2 py-2 text-left text-sm text-black hover:bg-gray-100 ${
-              language === "en" ? "font-bold" : ""
+              language === 'en' ? 'font-bold' : ''
             }`}
           >
             <div className="flex items-center justify-center w-8 h-8 bg-black rounded">
@@ -66,9 +66,9 @@ const LanguageSwitcher = () => {
           </button>
           <div className="h-[1px] bg-black my-1 mx-2"></div>
           <button
-            onClick={() => changeLanguage("es")}
+            onClick={() => changeLanguage('es')}
             className={`flex items-center gap-2 w-full px-2 py-2 text-left text-sm text-black hover:bg-gray-100 ${
-              language === "es" ? "font-bold" : ""
+              language === 'es' ? 'font-bold' : ''
             }`}
           >
             <div className="flex items-center justify-center w-8 h-8 bg-black rounded">

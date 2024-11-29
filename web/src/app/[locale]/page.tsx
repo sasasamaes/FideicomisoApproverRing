@@ -1,11 +1,10 @@
-"use client";
+'use client';
 
-import Bounded from "@/components/Bounded";
-import { useTranslations } from "next-intl";
+import Bounded from '@/components/Bounded';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
-
-  const t = useTranslations("HomePage"); 
+  const t = useTranslations('HomePage');
 
   return (
     <Bounded center={true}>
@@ -13,15 +12,12 @@ export default function Home() {
         <h1 className="flex flex-col items-center">
           +{' '}
           <span className="text-[40px] md:text-[80px] font-bold text-primary_green">
-            {t("title")}
+            {t('title')}
           </span>
-          <span className="text-[40px] md:text-[80px] text-white">
-            {t("subtitle")}
-          </span>
-          +{' '}
+          <span className="text-[40px] md:text-[80px] text-white">{t('subtitle')}</span>+{' '}
         </h1>
         <p className="text-[16px] md:text-[20px] w-full md:max-w-[60%] text-white text-center">
-          {t("description")}
+          {t('description')}
         </p>
       </div>
     </Bounded>

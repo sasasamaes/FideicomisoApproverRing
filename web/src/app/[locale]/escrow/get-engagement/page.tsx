@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Bounded from "@/components/Bounded";
-import { GetEngagementForm } from "@/components/modules/escrow/GetEngagementForm";
-import WithAuthProtect from "@/constants/helpers/WithAuth";
+import Bounded from '@/components/Bounded';
+import { GetEngagementForm } from '@/components/modules/escrow/GetEngagementForm';
+import WithAuthProtect from '@/constants/helpers/WithAuth';
 
 const GetEngagement = () => {
   return (

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -16,11 +16,11 @@ export const getEngagement = async (payload: EscrowPayload) => {
     return response;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.error("Error:", error.message);
+      console.error('Error:', error.message);
       throw error;
     } else {
-      console.error("Error:", error);
-      throw new Error("Error");
+      console.error('Error:', error);
+      throw new Error('Error');
     }
   }
 };

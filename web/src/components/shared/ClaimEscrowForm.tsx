@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -8,10 +8,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { UseFormReturn } from "react-hook-form";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { UseFormReturn } from 'react-hook-form';
 
 interface FormFieldInterface {
   name: string;
@@ -42,10 +42,10 @@ export function ClaimEscrowForm({
   form,
   onSubmit,
   submitButtonText,
-  className = "",
-  gradientFrom = "from-slate-900",
-  gradientVia = "via-slate-800",
-  gradientTo = "to-green-900",
+  className = '',
+  gradientFrom = 'from-slate-900',
+  gradientVia = 'via-slate-800',
+  gradientTo = 'to-green-900',
 }: ClaimEscrowFormProps) {
   return (
     <div className="w-full p-4 md:p-0">
@@ -54,18 +54,13 @@ export function ClaimEscrowForm({
       >
         <CardHeader className="space-y-4 p-8 md:p-10">
           <div className="space-y-2">
-            <CardTitle className="text-2xl font-medium text-white">
-              {title}
-            </CardTitle>
+            <CardTitle className="text-2xl font-medium text-white">{title}</CardTitle>
             <p className="text-xl text-white/70">{subtitle}</p>
           </div>
         </CardHeader>
         <CardContent className="p-8 md:p-10">
           <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="flex flex-col space-y-8"
-            >
+            <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-8">
               {fields.map((field) => (
                 <FormField
                   key={field.name}
@@ -84,9 +79,7 @@ export function ClaimEscrowForm({
                         />
                       </FormControl>
                       {field.description && (
-                        <p className="text-xl text-white/70">
-                          {field.description}
-                        </p>
+                        <p className="text-xl text-white/70">{field.description}</p>
                       )}
                       <FormMessage className="text-red-300" />
                     </FormItem>

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Bounded from "@/components/Bounded";
-import { RefundRemainingFundsForm } from "@/components/modules/escrow/RefundRemainingFundsForm";
-import WithAuthProtect from "@/constants/helpers/WithAuth";
+import Bounded from '@/components/Bounded';
+import { RefundRemainingFundsForm } from '@/components/modules/escrow/RefundRemainingFundsForm';
+import WithAuthProtect from '@/constants/helpers/WithAuth';
 
 const RefundRemainingFuns = () => {
   return (

@@ -1,17 +1,17 @@
-import { useToast } from "@/hooks/use-toast";
-import { fundEscrow } from "@/services/escrow/fundEscrow";
-import { useLoaderStore } from "@/store/utilsStore";
-import { useWalletStore } from "@/store/walletStore";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { useToast } from '@/hooks/use-toast';
+import { fundEscrow } from '@/services/escrow/fundEscrow';
+import { useLoaderStore } from '@/store/utilsStore';
+import { useWalletStore } from '@/store/walletStore';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
 const formSchema = z.object({
   contractId: z.string().min(1, {
-    message: "Engagement must be at least 5 characters.",
+    message: 'Engagement must be at least 5 characters.',
   }),
   engagementId: z.string().min(1, {
-    message: "Engagement must be at least 1 characters.",
+    message: 'Engagement must be at least 1 characters.',
   }),
 });
 
@@ -23,8 +23,8 @@ export const useFundEscrowHook = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      contractId: "",
-      engagementId: "",
+      contractId: '',
+      engagementId: '',
     },
   });
 
@@ -36,32 +36,30 @@ export const useFundEscrowHook = () => {
     try {
       const { data } = await fundEscrow(payloadSubmit);
 
-      if (data.status === "SUCCESS" || data.status === 201) {
+      if (data.status === 'SUCCESS' || data.status === 201) {
         form.reset();
         setIsLoading(false);
         toast({
-          title: "Success",
+          title: 'Success',
           description: data.message,
         });
       } else {
         setIsLoading(false);
         toast({
-          title: "Error",
-          description: data.message || "An error occurred",
-          variant: "destructive",
+          title: 'Error',
+          description: data.message || 'An error occurred',
+          variant: 'destructive',
         });
       }
     } catch (error: any) {
       setIsLoading(false);
       const errorMessage =
-        error.response && error.response.data
-          ? error.response.data.message
-          : "An error occurred";
+        error.response && error.response.data ? error.response.data.message : 'An error occurred';
 
       toast({
-        title: "Error",
+        title: 'Error',
         description: errorMessage,
-        variant: "destructive",
+        variant: 'destructive',
       });
     }
   };

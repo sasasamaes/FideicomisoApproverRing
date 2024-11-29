@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -9,19 +9,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { useRefundRemainingFundsEscrowHook } from "./hooks/refund-remaining-funds-escrow.hook";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { useRefundRemainingFundsEscrowHook } from './hooks/refund-remaining-funds-escrow.hook';
 
 export function RefundRemainingFundsForm() {
   const { onSubmit, form } = useRefundRemainingFundsEscrowHook();
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col space-y-6"
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6">
         <FormField
           control={form.control}
           name="contractId"
@@ -45,8 +42,8 @@ export function RefundRemainingFundsForm() {
                 <Input placeholder="Enter the engagement" {...field} />
               </FormControl>
               <FormDescription>
-                This engagement will help you identify the escrows associated
-                with a service provider.
+                This engagement will help you identify the escrows associated with a service
+                provider.
               </FormDescription>
               <FormMessage />
             </FormItem>

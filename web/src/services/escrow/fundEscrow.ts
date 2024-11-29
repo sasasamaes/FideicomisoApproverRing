@@ -1,7 +1,7 @@
-import axios from "axios";
-import { kit } from "@/wallet/walletKit";
-import { WalletNetwork } from "@creit.tech/stellar-wallets-kit";
-import { signTransaction } from "@stellar/freighter-api";
+import axios from 'axios';
+import { kit } from '@/wallet/walletKit';
+import { WalletNetwork } from '@creit.tech/stellar-wallets-kit';
+import { signTransaction } from '@stellar/freighter-api';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -30,11 +30,11 @@ export const fundEscrow = async (payload: EscrowPayload) => {
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.error("Error:", error.message);
+      console.error('Error:', error.message);
       throw error;
     } else {
-      console.error("Error:", error);
-      throw new Error("Error");
+      console.error('Error:', error);
+      throw new Error('Error');
     }
   }
 };

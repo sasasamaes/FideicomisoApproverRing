@@ -1,11 +1,11 @@
-import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import Link from "next/link";
+} from '@/components/ui/navigation-menu';
+import Link from 'next/link';
 
 type ItemsHeaderProps = {
   isEnabled: string;
@@ -14,14 +14,12 @@ type ItemsHeaderProps = {
 
 const ItemsHeader = ({ isEnabled, currentLocale }: ItemsHeaderProps) => {
   const pathname = usePathname();
-  const t = useTranslations("ItemsHeader");
+  const t = useTranslations('ItemsHeader');
 
   const isActive = (path: string) => pathname === path;
 
   const getLinkStyles = (path: string) =>
-    isActive(path)
-      ? "font-bold text-revolutionary_green underline"
-      : "text-white";
+    isActive(path) ? 'font-bold text-revolutionary_green underline' : 'text-white';
 
   const basePath = `/${currentLocale}`;
 
@@ -33,23 +31,19 @@ const ItemsHeader = ({ isEnabled, currentLocale }: ItemsHeaderProps) => {
             <NavigationMenuItem>
               <Link
                 href={`${basePath}/escrow/initialize-escrow`}
-                className={getLinkStyles(
-                  `${basePath}/escrow/initialize-escrow`
-                )}
+                className={getLinkStyles(`${basePath}/escrow/initialize-escrow`)}
                 passHref
               >
-                {t("initializeEscrow")}
+                {t('initializeEscrow')}
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
                 href={`${basePath}/escrow/claim-escrow-earnings`}
-                className={getLinkStyles(
-                  `${basePath}/escrow/claim-escrow-earnings`
-                )}
+                className={getLinkStyles(`${basePath}/escrow/claim-escrow-earnings`)}
                 passHref
               >
-                {t("claimEarnings")}
+                {t('claimEarnings')}
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
