@@ -14,18 +14,18 @@
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Approver Fideicomiso"
+        android:text="@string/titleText"
         android:textSize="24sp"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         android:layout_marginBottom="32dp" />
 
-    <!-- Campo de texto para Engadment ID -->
+    <!-- Campo de texto para Engagement ID -->
     <EditText
-        android:id="@+id/engadmentIdInput"
+        android:id="@+id/engagementIdInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Engadment ID"
+        android:hint="@string/engagementId"
         android:background="@android:color/darker_gray"
         android:padding="12dp"
         android:layout_marginBottom="24dp"
@@ -36,19 +36,20 @@
         android:id="@+id/contractIdInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contract ID"
-        android:background="@android:color/darker_gray"
-        android:padding="12dp"
         android:layout_marginBottom="24dp"
-        android:inputType="text" />
+        android:background="@android:color/darker_gray"
+        android:hint="@string/contractId"
+        android:inputType="text"
+        android:padding="12dp" />
 
     <!-- Botón Entrar -->
     <Button
         android:id="@+id/enterButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrar"
+        android:text="@string/enterButton"
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/holo_blue_light"
         android:padding="12dp" />
+
 </LinearLayout>
