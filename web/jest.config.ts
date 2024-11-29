@@ -9,12 +9,13 @@ const config: Config = {
   modulePaths: ['<rootDir>/src'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+    "\\.(css|scss|svg|png|jpg)$": "identity-obj-proxy",
   },
   transform: {
     '^.+\\.tsx?$': ['ts-jest', {
       tsconfig: './tsconfig.jest.json'
-    }]
+    }],
+    "^.+\\.js$": "babel-jest",
   },
   testPathIgnorePatterns: [
     '/node_modules/',
@@ -44,4 +45,3 @@ const config: Config = {
 }
 
 export default config
-
