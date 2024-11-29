@@ -102,6 +102,9 @@ Each folder within the project (`android`, `contracts`, `frontend`) contains its
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
 
+## 📝 Testing our Frontend
+Please see our [TEST.md](web/TEST.md) for details on how to successfully test our frontend.
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
