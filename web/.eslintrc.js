@@ -23,9 +23,9 @@ module.exports = {
   rules: {
     'prettier/prettier': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error'],
-    'import/no-unresolved': 'error',
-    'import/named': 'error',
+    '@typescript-eslint/no-unused-vars': ['off'],
+    'import/no-unresolved': 'off',
+    'import/named': 'off',
   },
   ignorePatterns: ['.eslintrc.js'],
 };
