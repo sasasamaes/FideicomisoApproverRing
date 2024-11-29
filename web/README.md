@@ -3,6 +3,7 @@
 **Revolutionary Farmers** is a Next.js project focused on advancing agriculture by providing a platform with escrow services. This project aims to bring innovative solutions to farmers, suppliers, and buyers in the agriculture sector by ensuring secure transactions through escrow as a service.
 
 ## ✨ Features
+
 - **Escrow Service:** Secure transactions for agriculture.
 - **User Authentication:** Secure login for all users.
 - **Product Listings:** Manage and view agricultural products.
@@ -12,7 +13,7 @@
 ## 📝 Prerequisites
 
 Ensure you have **Node.js** installed (version 18.x or higher).  
-To verify the installed version, use the following command:  
+To verify the installed version, use the following command:
 
 ```bash
   node -v
@@ -23,17 +24,20 @@ If Node.js is not installed, download it from the official [Node.js website](htt
 ## 🚀 Getting Started
 
 1. Clone the Repository:
+
 ```bash
   git clone https://github.com/your-username/Revolutionary_Farmers.git
   cd Revolutionary_Farmers/web/
 ```
 
 2. Install dependencies:
+
 ```bash
   npm install
 ```
 
 3. Run development server:
+
 ```bash
   npm run dev
 ```
@@ -41,11 +45,12 @@ If Node.js is not installed, download it from the official [Node.js website](htt
 4. Open [http://localhost:3001](http://localhost:3001) in your browser
 
 Available Commands:
+
 - `npm run dev` - Start development server
 - `npm run build` - Create production build
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint linter
-- `npm run format` -  Format code with Prettier
+- `npm run format` - Format code with Prettier
 
 ## 🛠 Tech Stack
 

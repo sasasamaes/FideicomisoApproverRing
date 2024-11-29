@@ -1,4 +1,4 @@
-import { TailSpin } from "react-loader-spinner";
+import { TailSpin } from 'react-loader-spinner';
 
 interface LoaderProps {
   isLoading: boolean;

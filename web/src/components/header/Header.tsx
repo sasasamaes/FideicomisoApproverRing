@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import React, { useState, useCallback, useEffect } from "react";
-import { useWalletStore } from "@/store/walletStore";
-import { useWallet } from "@/wallet/hooks/useWallet.hook";
-import { FaUserCircle } from "react-icons/fa";
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
-import ItemsHeader from "./ItemsHeader";
-import LanguageSwitcher from "./LanguageSwitcher";
-import { usePathname, useRouter } from "next/navigation";
-import { useLanguageStore } from "@/store/languageStore";
+import React, { useState, useCallback, useEffect } from 'react';
+import { useWalletStore } from '@/store/walletStore';
+import { useWallet } from '@/wallet/hooks/useWallet.hook';
+import { FaUserCircle } from 'react-icons/fa';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import ItemsHeader from './ItemsHeader';
+import LanguageSwitcher from './LanguageSwitcher';
+import { usePathname, useRouter } from 'next/navigation';
+import { useLanguageStore } from '@/store/languageStore';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { connectWallet, disconnectWallet } = useWallet();
   const { address, name } = useWalletStore();
-  const { language } = useLanguageStore(); 
+  const { language } = useLanguageStore();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -24,9 +24,9 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
 
@@ -34,7 +34,7 @@ const Header = () => {
     try {
       await connectWallet();
     } catch (error) {
-      console.error("Error connecting wallet:", error);
+      console.error('Error connecting wallet:', error);
     }
   };
 
@@ -45,13 +45,13 @@ const Header = () => {
         setIsMenuOpen(false);
       }
     } catch (error) {
-      console.error("Error disconnecting wallet:", error);
+      console.error('Error disconnecting wallet:', error);
     }
   };
 
   const handleLogoClick = () => {
     const basePath = `/${language}`;
-    router.push(basePath); 
+    router.push(basePath);
   };
 
   return (
@@ -61,13 +61,7 @@ const Header = () => {
         className="md:m-0 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
         aria-label="Home"
       >
-        <Image
-          src="/logo.svg"
-          width={40}
-          height={40}
-          alt="Website logo"
-          priority
-        />
+        <Image src="/logo.svg" width={40} height={40} alt="Website logo" priority />
       </button>
 
       <nav className="hidden md:block" aria-label="Main navigation">
@@ -107,7 +101,7 @@ const Header = () => {
           className="p-2 text-white hover:bg-primary/10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

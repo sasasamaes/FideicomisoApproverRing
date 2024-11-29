@@ -1,5 +1,5 @@
-import { create } from "zustand";
-import { devtools, persist } from "zustand/middleware";
+import { create } from 'zustand';
+import { devtools, persist } from 'zustand/middleware';
 
 type LoaderState = {
   isLoading: boolean;
@@ -10,5 +10,5 @@ export const useLoaderStore = create<LoaderState>()(
   devtools((set) => ({
     isLoading: false,
     setIsLoading: (isLoading: boolean) => set({ isLoading }),
-  })),
+  }))
 );

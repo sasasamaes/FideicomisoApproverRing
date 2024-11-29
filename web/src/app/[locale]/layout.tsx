@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
-import localFont from "next/font/local";
-import { Toaster } from "@/components/ui/toaster";
-import Header from "@/components/header/Header";
-import "./globals.css";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import localFont from 'next/font/local';
+import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/header/Header';
+import './globals.css';
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 });
 
 export default function RootLayout({
@@ -31,14 +31,12 @@ export default function RootLayout({
   const router = useRouter();
 
   useEffect(() => {
-    const storedLocale = localStorage.getItem("language") || locale;
+    const storedLocale = localStorage.getItem('language') || locale;
     if (storedLocale !== currentLocale) {
-      const newPathname = window.location.pathname.replace(
-        /^\/[a-z]{2}/,
-        `/${storedLocale}`
-      );
+      const newPathname = window.location.pathname.replace(/^\/[a-z]{2}/, `/${storedLocale}`);
       if (newPathname !== window.location.pathname) {
-        setCurrentLocale(storedLocale); router.replace(newPathname);
+        setCurrentLocale(storedLocale);
+        router.replace(newPathname);
       }
     }
   }, [locale, currentLocale, router]);
@@ -46,9 +44,7 @@ export default function RootLayout({
   useEffect(() => {
     const loadMessages = async () => {
       try {
-        const importedMessages = (
-          await import(`../../../messages/${currentLocale}.json`)
-        ).default;
+        const importedMessages = (await import(`../../../messages/${currentLocale}.json`)).default;
         setMessages(importedMessages);
       } catch (error) {
         console.error(`Failed to load messages for locale: ${currentLocale}`, error);

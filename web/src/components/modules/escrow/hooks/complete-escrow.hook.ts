@@ -1,15 +1,15 @@
-import { completeEscrow } from "@/services/escrow/completeEscrow";
-import { useWalletStore } from "@/store/walletStore";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { completeEscrow } from '@/services/escrow/completeEscrow';
+import { useWalletStore } from '@/store/walletStore';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
 const formSchema = z.object({
   contractId: z.string().min(1, {
-    message: "Engagement must be at least 5 characters.",
+    message: 'Engagement must be at least 5 characters.',
   }),
   engagementId: z.string().min(1, {
-    message: "Engagement must be at least 5 characters.",
+    message: 'Engagement must be at least 5 characters.',
   }),
 });
 
@@ -19,8 +19,8 @@ export const useCompleteEscrowHook = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      contractId: "",
-      engagementId: "",
+      contractId: '',
+      engagementId: '',
     },
   });
 

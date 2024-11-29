@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        engadmentIdInput = findViewById(R.id.engadmentIdInput)
+        engadmentIdInput = findViewById(R.id.engagementIdInput)
         enterButton = findViewById(R.id.enterButton)
 
         enterButton.setOnClickListener {

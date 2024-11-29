@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Bounded from "@/components/Bounded";
-import { CancelEscrowForm } from "@/components/modules/escrow/CancelEscrowForm";
-import WithAuthProtect from "@/constants/helpers/WithAuth";
+import Bounded from '@/components/Bounded';
+import { CancelEscrowForm } from '@/components/modules/escrow/CancelEscrowForm';
+import WithAuthProtect from '@/constants/helpers/WithAuth';
 
 const CancelEscrow = () => {
   return (

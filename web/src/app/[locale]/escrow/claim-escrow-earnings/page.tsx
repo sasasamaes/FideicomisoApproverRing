@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Bounded from "@/components/Bounded";
-import { ClaimEscrowEarningsForm } from "@/components/modules/escrow/ClaimEscrowEarningsForm";
-import WithAuthProtect from "@/constants/helpers/WithAuth";
+import Bounded from '@/components/Bounded';
+import { ClaimEscrowEarningsForm } from '@/components/modules/escrow/ClaimEscrowEarningsForm';
+import WithAuthProtect from '@/constants/helpers/WithAuth';
 
 const ClaimEscrowEarnings = () => {
   return (
