@@ -19,7 +19,7 @@
         <activity
             android:name=".FindEscrowActivity"
             android:exported="true"
-            android:label="Find Escrow"
+            android:label="@string/titleText"
             android:theme="@style/Theme.FideicomisoApproverRing">
 
             <intent-filter>
