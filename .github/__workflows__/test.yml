@@ -1,0 +1,68 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+
+  pull_request:
+    branches: [main]
+    paths:
+      - 'web/**'
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    defaults:
+    run:
+    working-directory: web
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "pnpm"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Format check
+        run: pnpm prettier --check "src/**/*.{js,jsx,ts,tsx,json,css,md}"
+
+      - name: Build
+        run: pnpm build
+
+      - name: Run Jest tests
+        run: pnpm test
+
+      - name: Run E2E tests
+        run: pnpm test:e2e:ci
+        env:
+        CI: true
+        NODE_ENV: test
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: ./web/coverage/
+
+        - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+        name: test-artifacts
+        path: |
+          web/coverage/
+          web/cypress/screenshots/
+          web/cypress/videos/
