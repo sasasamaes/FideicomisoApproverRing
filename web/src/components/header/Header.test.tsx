@@ -8,15 +8,31 @@ describe('Header Component', () => {
   it('renders header with title and navigation', () => {
     render(<Header />);
     
-    // Check if header title exists
-    const headerTitle = screen.getByText('My Website');
+    // Use semantic queries and test accessibility
+    const header = screen.getByRole('banner');
+    const headerTitle = screen.getByRole('heading', { name: 'My Website' });
+    expect(header).toBeInTheDocument();
     expect(headerTitle).toBeInTheDocument();
     
-    // Check if navigation buttons exist
-    const homeButton = screen.getByText('Home');
-    const aboutButton = screen.getByText('About');
+    // Test navigation elements
+    const nav = screen.getByRole('navigation');
+    const homeLink = screen.getByRole('link', { name: 'Home' });
+    const aboutLink = screen.getByRole('link', { name: 'About' });
     
-    expect(homeButton).toBeInTheDocument();
-    expect(aboutButton).toBeInTheDocument();
+    expect(nav).toBeInTheDocument();
+    expect(homeLink).toBeInTheDocument();
+    expect(aboutLink).toBeInTheDocument();
+  });
+
+  it('handles navigation interactions correctly', () => {
+    render(<Header />);
+    const homeLink = screen.getByRole('link', { name: 'Home' });
+    expect(homeLink).toHaveAttribute('href', '/');
+  });
+
+  it('meets accessibility requirements', () => {
+    render(<Header />);
+    const nav = screen.getByRole('navigation');
+    expect(nav).toHaveAttribute('aria-label', 'Main');
   });
 });
