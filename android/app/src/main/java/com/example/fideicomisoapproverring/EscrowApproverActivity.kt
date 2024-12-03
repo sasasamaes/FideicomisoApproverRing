@@ -12,7 +12,7 @@ import org.stellar.walletsdk.StellarConfiguration
 import android.widget.Toast
 
 class EscrowApproverActivity : AppCompatActivity() {
-    private lateinit var wallet: Wallet
+    private lateinit  var wallet: Wallet
     private lateinit var connectButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +28,9 @@ class EscrowApproverActivity : AppCompatActivity() {
 
     private fun setupWalletConnection() {
         connectButton.setOnClickListener {
+            connectButton.isEnabled = false
+            connectButton.text = "Connecting..."
+
             lifecycleScope.launch {
                 try {
                     // Create a new key pair
@@ -45,9 +48,20 @@ class EscrowApproverActivity : AppCompatActivity() {
                     finish()
 
                 } catch (e: Exception) {
+                    // Clear any partial connection state
+                    getSharedPreferences("WalletPrefs", MODE_PRIVATE)
+                        .edit().remove("isWalletConnected").apply()
+                            val errorMessage = when (e) {
+                                is SecurityException -> "Security error: ${e.message}"
+                                 is IllegalStateException -> "Wallet error: ${e.message}"
+                                    else -> "Connection failed: ${e.message}"
+                            }
                     Toast.makeText(this@EscrowApproverActivity,
+
                         "Connection failed: ${e.message}",
                         Toast.LENGTH_SHORT).show()
+                    connectButton.isEnabled = true
+                    connectButton.text = "Connect to Wallet"
                 }
             }
         }
