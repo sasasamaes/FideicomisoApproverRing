@@ -12,5 +12,10 @@
             android:name=".EscrowDetailsActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".EscrowApproverActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light"
+            />
     </application>
 </manifest> 
