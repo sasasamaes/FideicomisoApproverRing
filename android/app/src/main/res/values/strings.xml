@@ -3,4 +3,5 @@
     <string name="engagementId">Engagement ID</string>
     <string name="contractId">Contract ID</string>
     <string name="enterButton">Enter</string>
+    <string name="escrow_approver">Escrow_Approver</string>
 </resources>

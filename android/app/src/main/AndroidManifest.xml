@@ -40,6 +40,14 @@
             android:theme="@style/Theme.AppCompat.Light">
 
         </activity>
+        <activity
+            android:name=".EscrowApproverActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light"
+            >
+
+
+        </activity>
     </application>
 
 </manifest>
