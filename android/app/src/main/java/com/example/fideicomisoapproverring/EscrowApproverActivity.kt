@@ -36,6 +36,8 @@ class EscrowApproverActivity : AppCompatActivity() {
                     // Create a new key pair
                     val keyPair = wallet.stellar().account().createKeyPair()
 
+                    // keypair is not being used. Need more research on how to best implement this.
+
                     // Store the connected state
                     val sharedPrefs = getSharedPreferences("WalletPrefs", MODE_PRIVATE)
                     sharedPrefs.edit().putBoolean("isWalletConnected", true).apply()

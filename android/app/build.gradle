@@ -73,7 +73,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
-    implementation("org.stellar:wallet-sdk:1.1.0") {
+    implementation("org.stellar:wallet-sdk:1.2.0") {
         exclude group: 'commons-codec', module: 'commons-codec'
         exclude group: 'org.jetbrains', module: 'annotations'
         exclude group: 'com.github.stellar', module: 'java-stellar-sdk'
