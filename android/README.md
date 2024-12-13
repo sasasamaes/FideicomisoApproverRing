@@ -9,12 +9,14 @@ The project is located in the `android` folder and is developed using Android St
 ## 📝 Prerequisites
 
 ### Minimum Hardware Requirements:
+
 - Operating System: Windows (8, 10, or 11) / Linux / macOS (10.14 Mojave or later) / ChromeOS.
 - RAM: 8 GB (16 GB recommended)
 - Storage: 4 GB of free space for Android Studio and dependencies.
 - CPU: 64-bit processor (Intel or AMD).
 
 ### Software Requirements:
+
 - [Android Studio](https://developer.android.com/studio): Version 4.0 or higher.
 - [JDK](https://www.oracle.com/java/technologies/javase-downloads.html): Version 8 or higher.
 - An Android device or a configured emulator
@@ -40,19 +42,20 @@ Follow these steps to set up the project on your local machine:
    ```
 
    Then, open the project in Android Studio:
-	- Launch **Android Studio**.
+
+   - Launch **Android Studio**.
    - Click on “Open an existing Android Studio project”.
    - Select the `android` folder from the cloned repository.
 
 3. **Configure Dependencies**
 
    Configure Dependencies
+
    ```bash
       implementation 'com.ringofrings:ringofringssdk:latest_version'
    ```
 
    Check the Ring of Rings SDK repository (https://github.com/ringofrings/ringofringssdk) for the latest version.
-
 
 4. **Configure the Trustless Work API**
 
@@ -70,6 +73,10 @@ Once you have installed and configured the project, follow these steps to run an
    - **Approve Trusts:** Select a trust and follow the instructions to approve it.
    - **Reject Trusts:** If necessary, you can also reject trusts by following the designated workflow.
    - **Verify Contracts:** You can review the status of trust contracts from the interface.
+
+## 📄 Documentation
+
+> All active development for this project happens on the `dev` branch. To contribute effectively, please ensure your changes work as intended on this branch before submitting a pull request. Pull requests should always target the `dev` branch for proper testing and review before merging into the `main` codebase. Please **DO NOT** submit pull requests directly to the `main` branch.
 
 ## 🛠 Tech Stack
 

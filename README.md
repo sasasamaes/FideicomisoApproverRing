@@ -1,9 +1,7 @@
-
 <a href="https://x.com/RevoFarmers">
   <img src="https://img.shields.io/twitter/follow/RevoFarmers?style=social"/>
 </a>
 <img src="https://img.shields.io/github/stars/Crypto-Jaguars/Revolutionary_Farmers?style=social"/>
-
 
 [![Telegram Chat][tg-badge]][tg-url]
 
@@ -29,7 +27,6 @@ This project was created and initiated during the [Ethereum Pura Vida 2024](http
 ## 🗂️ Project Structure
 
 - **android**: An Android Studio app where users can approve trust transactions using the Zero-Knowledge Ring ([Zero-Knowledge Ring](https://www.zero-knowledge-ring.com/)) for privacy-focused transaction validation. This app also connects to the Trustless Work API to manage escrow-based approvals.
-  
 - **contracts**: Blockchain smart contracts (under development) that will support decentralized management of the trusts, providing a transparent and secure solution for crop financing.
 
 - **frontend**: A Next.js application where farmers can request trusts via the Trustless Work API. This interface allows farmers to access the platform securely and manage their requests for escrow-backed financing.
@@ -102,7 +99,12 @@ Each folder within the project (`android`, `contracts`, `frontend`) contains its
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
 
+## 📄 Documentation
+
+> All active development for this project happens on the `dev` branch. To contribute effectively, please ensure your changes work as intended on this branch before submitting a pull request. Pull requests should always target the `dev` branch for proper testing and review before merging into the `main` codebase. Please **DO NOT** submit pull requests directly to the `main` branch.
+
 ## 📝 Testing our Frontend
+
 Please see our [TEST.md](web/TEST.md) for details on how to successfully test our frontend.
 
 ## 📜 License
