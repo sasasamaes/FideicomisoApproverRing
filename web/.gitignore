@@ -75,3 +75,4 @@ build/
 .yarn/install-state.gz
 package-lock.json
 yarn.lock
+*storybook.log
